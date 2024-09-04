@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathch</title>
+</head>
+<body>
+    <h1>Match</h1>
+
+    <script>
+        var st ='IJDKSMjdf&@($RI741)';
+
+
+        var digit = st.match(/[0-9]/g);
+        var upper = st.match(/[A-Z]/g);
+        var lower= st.match(/[a-z]/g);
+        var sp = st.match(/[!-/:-@[-`{-~]/g)
+        // document.write(digit, upper, lower, sp)
+
+        if(st==''){
+            document.write("Enter data");
+        }
+        else if(upper==null){
+            document.write("Upper case need");
+        }
+        else if(lower==null){
+            document.write("Lower need")
+        }
+        else if(sp==null){
+            document.write('Special character must')
+        }
+        else if(digit==null){
+            document.write('Nuumber Need')
+        }
+        else{
+            document.write("Valid string");
+        }
+
+</script>
+</body>
+</html>

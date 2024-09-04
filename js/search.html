@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search</title>
+</head>
+<body>
+    <h1>Match</h1>
+
+    <script>
+        var st ='grras@12.com';
+
+        // document.write(st.search('@'))
+        document.write(st+'<br/>')
+        var sp=st.search('@')
+        var presp = st.search('@')-1
+        var aftsp = st.search('@')+1
+        document.write(sp, st[presp], st[aftsp] + '<br/>')
+
+        if(sp==-1 | st[presp]==undefined | st[aftsp]==undefined ){
+            document.write('Invalid Email')
+        }
+        else{
+            document.write('Valid Email')
+        }
+
+    </script>
+</body>
+</html>

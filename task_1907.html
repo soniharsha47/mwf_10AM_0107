@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1907</title>
+    <style>
+        .box{
+            border: 2px solid saddlebrown;
+            height: 300px;
+            width: 300px;
+            position: relative;
+        }
+        .sub{
+            height: 100px;
+            width: 100px;
+            background-color: saddlebrown;
+            position: absolute;
+            animation-name: ani;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        @keyframes ani {
+            0%{
+                top: 0;
+                left: 0;
+            }
+            25%{
+                top: 200px;
+                left: 0;
+            }
+            50%{
+                top: 200px;
+                left: 200px;
+            }
+            75%{
+                top: 0;
+                left: 200px;
+            }
+            100%{
+                top: 0;
+                left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="sub"></div>
+    </div>
+</body>
+</html>

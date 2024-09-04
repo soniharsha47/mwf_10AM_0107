@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+    <style>
+        header{
+            height: 5rem;
+            background-color: green;
+            overflow: hidden;
+            font-size: 100%;
+            text-align: center;
+        }
+        ul{
+            visibility: visible;
+            list-style-type: none;
+            display: flex;
+        }
+        li{padding: 1%;}
+        a{
+            color: black;
+            text-decoration: none;
+        }
+        .nav-btn{
+            visibility: hidden;
+        }
+
+    /* Table -> 1300px */
+    @media (max-width:1300px){
+        body{
+            background-color: gray;
+        }    
+        .nav-btn{
+            visibility: visible;
+        } 
+        ul{
+            visibility: hidden;
+        }
+        .nav-btn:hover ul{
+            visibility: visible;
+            display: block;
+        }
+    }   
+
+    @media (max-width:768px){
+        body{
+            background-color: bisque;
+        }
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Grras Solution Pvt. Ltd.</h1>
+    </header>
+    <nav>
+        <div class="nav-btn">hover to show nav
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </div>
+       
+    </nav>
+</body>
+</html>

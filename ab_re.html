@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absolute & relative</title>
+    <style>
+        .re{
+            height: 400px;
+            width: 400px;
+            border: 2px solid saddlebrown;
+            position: relative;
+            background-color: saddlebrown;
+        }
+        .ab1{
+            background-color: rgb(255, 228, 196);
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            left: 90%;
+            z-index: -1;
+        }
+        .ab2{
+            background-color: chocolate;
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="re">
+            <div class="ab1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam adipisci consectetur obcaecati ratione omnis, error dolorum voluptates consequatur pariatur quidem?</div>
+            <div class="ab2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod repellat esse dignissimos vitae deserunt nisi magni commodi rem cupiditate aliquid!</div>
+    </div>
+</body>
+</html>

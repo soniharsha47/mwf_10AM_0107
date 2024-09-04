@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telephone and ur</title>
+</head>
+<body>
+    <h1>Telephone & URL validation</h1>
+
+    <script>
+        var tel = '0123456709';
+
+        var notvalidd=tel.match(/[!-/:-~]/g)
+        console.log(notvalidd)
+
+        //  no character & digit only & length will me 10 only
+        if(tel.length<10 | tel.length>10){
+            alert('Telephone number is not valid length');
+        }
+        else if(notvalidd!=null){
+            alert('Not valid number it will digits only')
+        }
+        else{
+            document.write('number is valid')
+        }
+
+        // ----------------------------------
+        var url = 'https://www.google.com/';
+        var searchcolun = url.match('://')
+        document.write('<br/>'+ searchcolun + '<br/>') 
+        
+        var chec=url.search('://');
+        
+        document.write('<br/>'+ url[chec-1] + '<br/>')
+        document.write('<br/>'+ url[chec+3] + '<br/>')
+        
+        if(searchcolun==null | url[chec-1]==undefined | url[chec+3]==undefined ){
+            document.write('Invalid url')
+        }
+        else{
+            document.write('Valid url')
+        }
+    </script>
+</body>
+</html>

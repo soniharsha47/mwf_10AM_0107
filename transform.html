@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=0, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+        .rotate{
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            margin: 5%;
+            transition-duration: 2s;
+        }
+        .rotate:hover{
+            transform: rotate(3600deg);
+        }
+        .skew{
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            margin: 5%;
+            transform: skew(10deg);
+            box-shadow: 4px 4px 0px black;
+        }
+
+        .scale{
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            margin: 5%;
+            transform-origin: right;
+            transition-duration: 5s;
+        }
+        .scale:hover{
+            transform: scaleY
+            (2);
+        }
+    </style>
+</head>
+<body>
+    <div class="rotate">Rotate</div>
+    <div class="skew">Skew</div>
+    <div class="scale">Scale</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form name="validd" onsubmit="return valid()">
+        <input type="text" id="uname" />
+        <span id="uerr"></span>
+        <input type="email" />
+        <input type="number" id="qun">
+        <span id="qnt"></span>
+        <input type="submit" value="Submit"/>
+    </form>
+
+    <script>
+        // Get the form element
+      function valid(){  
+            var uname = document.forms['validd']['uname'].value
+            var qnt = document.forms['validd']['qun'].value;
+            console.log(uname);
+
+            if(uname==''){
+                console.log('Please Enter User name !!!');
+                document.getElementById('uerr').innerHTML = 'Please Enter User name !!!';
+                return false;
+            }
+            else if(uname.length<2){
+                console.log('Name should be 2 or more character');
+                document.getElementById('uerr').innerHTML = 'Name should be 2 or more character';
+                return false;
+            }
+            else if(uname.length>=25){
+                console.log('Name should be 25 character or less!!!!!');
+                document.getElementById('uerr').innerHTML = 'Name should be 25 character or less!!!!!';
+                return false;
+            }
+            else if(qnt==''){
+                console.log('Please Enter Quantity !!!');
+                document.getElementById('qnt').innerHTML='Please enter Quantity !!!'
+                return false;
+            }
+            else if(qnt<=0){
+                console.log('please Enter valid number !!!! ');
+                return false;
+            }
+            else if(qnt>15){
+                console.log('Qunatity should be less than 15.....');
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+    
+</body>
+</html>
